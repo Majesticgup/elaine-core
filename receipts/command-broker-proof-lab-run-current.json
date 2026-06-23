@@ -1,0 +1,75 @@
+{
+  "case_results": [
+    {
+      "behavior": "claim_downgrade",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-001",
+      "expected_decision": "downgrade",
+      "observed_decision": "downgrade",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-001",
+      "result": "pass",
+      "safe_output_sha256": "9f1f150e0b668d95fb9b2041e24aa57c71f051130b50fa20b0837b03fd66570e",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "missing_proof_hold",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-002",
+      "expected_decision": "hold",
+      "observed_decision": "hold",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-002",
+      "result": "pass",
+      "safe_output_sha256": "0d0e1aebb18342d9259db2d1ce6539074d8448c40831fbec6975eb3f3cfce52b",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "gate_block",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-003",
+      "expected_decision": "block",
+      "observed_decision": "block",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-003",
+      "result": "pass",
+      "safe_output_sha256": "a71077f0180f713bcd1d74e70248879d48597cf627e215aae781aa00111651e8",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "receipt_proof_record",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-004",
+      "expected_decision": "record_receipt",
+      "observed_decision": "record_receipt",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-004",
+      "result": "pass",
+      "safe_output_sha256": "8772972d781fb62b416a0337c349aaee241ab0136d8170950283b1b60be991d5",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "public_language_block",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-005",
+      "expected_decision": "block",
+      "observed_decision": "block",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-005",
+      "result": "pass",
+      "safe_output_sha256": "fa9d43ca23a593cb0f22a5a1ac5d6862b31163079c4626f13828aeebc4da3328",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "recall_proof_linkage",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-006",
+      "expected_decision": "return_proof_link",
+      "observed_decision": "return_proof_link",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-006",
+      "result": "pass",
+      "safe_output_sha256": "f291baab033198835e09f612edfb54149a1a8470249e67d74115d496dded497c",
+      "synthetic_only": true
+    }
+  ],
+  "fail_count": 0,
+  "packet_id": "elaine-core-v0.1-local-export-v0",
+  "pass_count": 6,
+  "proof_case_count": 6,
+  "status": "cases_executed"
+}

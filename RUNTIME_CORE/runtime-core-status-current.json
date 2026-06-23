@@ -1,0 +1,91 @@
+{
+  "api": {
+    "claim_ceiling": "loopback API is documented as future/held work and is not active in this clean review package.",
+    "included": false,
+    "status": "held_not_in_public_package",
+    "surface": "loopback API"
+  },
+  "boundary_flags": {
+    "deployment_used": false,
+    "destructive_action_used": false,
+    "git_action_used": false,
+    "hosted_retrieval_used": false,
+    "install_used": false,
+    "localhost_api_started": false,
+    "mcp_server_started": false,
+    "model_call_used": false,
+    "private_corpus_used": false,
+    "provider_call_used": false,
+    "public_sharing_used": false,
+    "raw_secret_handling_used": false,
+    "service_started": false
+  },
+  "claim_ceiling": "clean-package Runtime Core CLI only; no service, API, MCP server, model invocation, private RAG, production readiness, or security outcome claim",
+  "gates": {
+    "blocked_public_actions": [
+      "GitHub proof release without A5 approval",
+      "public sharing without A5 approval",
+      "deployment",
+      "Anthropic sharing without A5 approval",
+      "production/security-benefit claims"
+    ],
+    "runtime_blockers": [
+      "Docker execution receipt must be attached by the readiness lane before claiming Docker proof executed",
+      "loopback API not implemented in clean package",
+      "local MCP server not implemented in clean package",
+      "model integration not active in clean package",
+      "private-corpus RAG not included in clean package",
+      "autonomous workstation control not included in clean package",
+      "production runtime readiness not proven"
+    ]
+  },
+  "generated_utc": "2026-06-22T02:29:01.578628Z",
+  "llm": {
+    "claim_ceiling": "local LLM is documented as future/held work and is not active in this clean review package.",
+    "included": false,
+    "status": "held_not_in_public_package",
+    "surface": "local LLM"
+  },
+  "manifest": {
+    "json_valid": true,
+    "missing_required_files": [],
+    "package_id": "elaine-core-v0.1-runtime-core-local-export-2026-06-20",
+    "path": "PACKAGE_MANIFEST.json",
+    "present": true,
+    "production_ready_claimed": false,
+    "public_release_authorized": false,
+    "runtime_core_included": true
+  },
+  "mcp": {
+    "claim_ceiling": "local MCP server is documented as future/held work and is not active in this clean review package.",
+    "included": false,
+    "status": "held_not_in_public_package",
+    "surface": "local MCP server"
+  },
+  "proof_lab": {
+    "proof_lab_path": "PROOF_LAB/elaine_research_proof_lab.py",
+    "proof_lab_present": true,
+    "receipts": [
+      {
+        "json_valid": true,
+        "path": "receipts/runtime-core-proof-lab-receipt.json",
+        "present": true,
+        "status": "deterministic_public_review_receipt"
+      },
+      {
+        "json_valid": true,
+        "path": "receipts/tuesday-fresh-copy-proof-lab-receipt.json",
+        "present": true,
+        "status": "deterministic_public_review_receipt"
+      },
+      {
+        "json_valid": true,
+        "path": "receipts/elaine-proof-lab-receipt.json",
+        "present": true,
+        "status": "deterministic_public_review_receipt"
+      }
+    ]
+  },
+  "runtime_id": "elaine-runtime-core-v0-package-cli",
+  "status": "pass"
+}

@@ -1,0 +1,533 @@
+{
+  "boundary_flags": {
+    "citation_complete_claimed": false,
+    "counsel_disclosure_cleared": false,
+    "customer_validation_claimed": false,
+    "external_review_authorized": false,
+    "git_publication_authorized": false,
+    "hosted_retrieval_used": false,
+    "license_selected": true,
+    "patent_filing_authorized": false,
+    "peer_review_claimed": false,
+    "production_ready_claimed": false,
+    "provider_call_used": false,
+    "public_release_authorized": false,
+    "public_sharing_authorized": false,
+    "raw_secret_handling_used": false,
+    "repository_publication_authorized": false
+  },
+  "case_results": [
+    {
+      "behavior": "claim_downgrade",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-001",
+      "expected_decision": "downgrade",
+      "observed_decision": "downgrade",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-001",
+      "result": "pass",
+      "safe_output_sha256": "9f1f150e0b668d95fb9b2041e24aa57c71f051130b50fa20b0837b03fd66570e",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "missing_proof_hold",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-002",
+      "expected_decision": "hold",
+      "observed_decision": "hold",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-002",
+      "result": "pass",
+      "safe_output_sha256": "0d0e1aebb18342d9259db2d1ce6539074d8448c40831fbec6975eb3f3cfce52b",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "gate_block",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-003",
+      "expected_decision": "block",
+      "observed_decision": "block",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-003",
+      "result": "pass",
+      "safe_output_sha256": "a71077f0180f713bcd1d74e70248879d48597cf627e215aae781aa00111651e8",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "receipt_proof_record",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-004",
+      "expected_decision": "record_receipt",
+      "observed_decision": "record_receipt",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-004",
+      "result": "pass",
+      "safe_output_sha256": "8772972d781fb62b416a0337c349aaee241ab0136d8170950283b1b60be991d5",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "public_language_block",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-005",
+      "expected_decision": "block",
+      "observed_decision": "block",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-005",
+      "result": "pass",
+      "safe_output_sha256": "fa9d43ca23a593cb0f22a5a1ac5d6862b31163079c4626f13828aeebc4da3328",
+      "synthetic_only": true
+    },
+    {
+      "behavior": "recall_proof_linkage",
+      "blocked_claim_allowed": false,
+      "case_id": "SDP-006",
+      "expected_decision": "return_proof_link",
+      "observed_decision": "return_proof_link",
+      "proof_or_receipt_ref": "synthetic://docproof/SDP-006",
+      "result": "pass",
+      "safe_output_sha256": "f291baab033198835e09f612edfb54149a1a8470249e67d74115d496dded497c",
+      "synthetic_only": true
+    }
+  ],
+  "claims": [
+    {
+      "claim": "The package can be indexed and hashed deterministically.",
+      "claim_id": "LAB-CLAIM-001",
+      "limit": "This proves local package hashing only.",
+      "proof_refs": [
+        "receipts/elaine-proof-lab-receipt.json"
+      ],
+      "state": "tested_locally"
+    },
+    {
+      "claim": "Six synthetic DocProof cases can execute as a proof-before-action slice.",
+      "claim_id": "LAB-CLAIM-002",
+      "limit": "This proves selected synthetic cases only.",
+      "proof_refs": [
+        "PROOF_LAB/docproof_cases.json",
+        "receipts/elaine-proof-lab-receipt.json"
+      ],
+      "state": "tested_locally"
+    },
+    {
+      "claim": "Public claims can map to proof, limitation, or blocked state.",
+      "claim_id": "LAB-CLAIM-003",
+      "limit": "Final public release still requires owner approval.",
+      "proof_refs": [
+        "CLAIM_LEDGER.md",
+        "DO_NOT_CLAIM.md"
+      ],
+      "state": "review_candidate"
+    },
+    {
+      "claim": "A public-safe product-proof backbone summary is included in the local Core export.",
+      "claim_id": "LAB-CLAIM-004",
+      "limit": "This proves a local summary exists and is indexed; it does not prove field security outcomes.",
+      "proof_refs": [
+        "docs/PRODUCT_PROOF_BACKBONE.md",
+        "receipts/elaine-proof-lab-receipt.json"
+      ],
+      "state": "tested_locally"
+    }
+  ],
+  "command_contract": {
+    "commands": [
+      "index",
+      "search",
+      "show-claim",
+      "run-cases",
+      "export-manifest"
+    ],
+    "entrypoint": "PROOF_LAB/elaine_research_proof_lab.py",
+    "external_actions": "none",
+    "stdlib_only": true
+  },
+  "documents": [
+    {
+      "bytes": 5055,
+      "line_count": 142,
+      "path": "PACKAGE_MANIFEST.json",
+      "sha256": "ff35c9691d9364d8d77ba159f73888f9ff8987fb388ed4218a01aa2c99ef84e2",
+      "token_count": 586,
+      "unique_token_count": 233
+    },
+    {
+      "bytes": 5641,
+      "line_count": 107,
+      "path": "README.md",
+      "sha256": "036fcba4b4617602c1ce5b722d21483816b5ba04912413cece31bae67e37bdc3",
+      "token_count": 841,
+      "unique_token_count": 324
+    },
+    {
+      "bytes": 2784,
+      "line_count": 93,
+      "path": "QUICKSTART.md",
+      "sha256": "ae42f505a63a4632e349305931773cedcb72ad50607eddb84d5be9444fa86f1e",
+      "token_count": 429,
+      "unique_token_count": 187
+    },
+    {
+      "bytes": 1758,
+      "line_count": 47,
+      "path": "REVIEWER_GUIDE.md",
+      "sha256": "295add3a3184e56ed1011b7436066bb538aaa6185298c75892ad8c08f821c365",
+      "token_count": 259,
+      "unique_token_count": 163
+    },
+    {
+      "bytes": 1429,
+      "line_count": 62,
+      "path": "REVIEWER_FEEDBACK_FORM.md",
+      "sha256": "e8ece61b4d4ccde09b1d09dd220c50c224d57e1db041ba07784b636094b4818f",
+      "token_count": 189,
+      "unique_token_count": 127
+    },
+    {
+      "bytes": 2513,
+      "line_count": 40,
+      "path": "RECEIPT_INDEX.md",
+      "sha256": "ed562845c81187a38de6961ce8a93bbbc37f5ff91a3520a8cf754e559967a097",
+      "token_count": 362,
+      "unique_token_count": 163
+    },
+    {
+      "bytes": 11358,
+      "line_count": 201,
+      "path": "LICENSE",
+      "sha256": "30a3dd2b614f400bc490206710a72c4b0800e1c51582bc8ec23b2f485ddb06c9",
+      "token_count": 1608,
+      "unique_token_count": 451
+    },
+    {
+      "bytes": 7050,
+      "line_count": 102,
+      "path": "PAPER.md",
+      "sha256": "1ac40975424ccbfca5ca2203be45b2883ee573694557363347ba8be9c33ee8c6",
+      "token_count": 980,
+      "unique_token_count": 420
+    },
+    {
+      "bytes": 6025,
+      "line_count": 47,
+      "path": "CLAIM_LEDGER.md",
+      "sha256": "939bfb38562f16562aa87d3a752887b26a1f8a025bf62c1aa097fb5d895a6d64",
+      "token_count": 849,
+      "unique_token_count": 318
+    },
+    {
+      "bytes": 1175,
+      "line_count": 29,
+      "path": "DO_NOT_CLAIM.md",
+      "sha256": "202f81a769c68ce6c816bc093293dceb6b1340cfdee47d1ea9ebe036c67fa62a",
+      "token_count": 143,
+      "unique_token_count": 96
+    },
+    {
+      "bytes": 2963,
+      "line_count": 45,
+      "path": "SECURITY.md",
+      "sha256": "b7c22892aff58ded5030ba052d939a658e4dca458742fd9cd3b594a5934c5b51",
+      "token_count": 398,
+      "unique_token_count": 226
+    },
+    {
+      "bytes": 697,
+      "line_count": 7,
+      "path": "NOTICE.md",
+      "sha256": "0b9a727a65997024576f816975163dc0cfcddb752869e22df79f71dff2e74835",
+      "token_count": 95,
+      "unique_token_count": 71
+    },
+    {
+      "bytes": 2303,
+      "line_count": 53,
+      "path": "RELEASE_REVIEW.md",
+      "sha256": "65bc37079e912b4641dd6bd6b4ba6be0184ec0e0e2d23d700b824cae51b58ce5",
+      "token_count": 320,
+      "unique_token_count": 182
+    },
+    {
+      "bytes": 572,
+      "line_count": 12,
+      "path": "LICENSE_DECISION_REQUIRED.md",
+      "sha256": "3eb8e8577b0995aa79a8b0bcd587fb3837700e12e1148ccc52f50a2589d811c7",
+      "token_count": 80,
+      "unique_token_count": 58
+    },
+    {
+      "bytes": 941,
+      "line_count": 18,
+      "path": "CONTRIBUTING.md",
+      "sha256": "13b5af0b2e637176def6c40ea1a6d052850956064e52ea5177d0e15bfe4e0423",
+      "token_count": 125,
+      "unique_token_count": 87
+    },
+    {
+      "bytes": 2865,
+      "line_count": 24,
+      "path": "SOURCE_CARDS_CANDIDATE.md",
+      "sha256": "9382b5a0faa56d5049d5cf0640a193bfb7ac83bbac963e36ca1c130bb4413a50",
+      "token_count": 378,
+      "unique_token_count": 204
+    },
+    {
+      "bytes": 1066,
+      "line_count": 26,
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "5e609141ddf643763bb9bcc57b466202aad9ad2487d76eb100e7599cf198036a",
+      "token_count": 143,
+      "unique_token_count": 95
+    },
+    {
+      "bytes": 1866,
+      "line_count": 45,
+      "path": "docs/THREAT_MODEL.md",
+      "sha256": "5573f25032dd70e6f55cedaa23a55cf31a2666ebf3b0999a5df126382187a7af",
+      "token_count": 241,
+      "unique_token_count": 169
+    },
+    {
+      "bytes": 2268,
+      "line_count": 39,
+      "path": "docs/GOVERNANCE_MODEL.md",
+      "sha256": "51f37aee154b7a6566c392b473a17c199ba2ab0963f4fb8747863ce519a533ec",
+      "token_count": 323,
+      "unique_token_count": 180
+    },
+    {
+      "bytes": 1731,
+      "line_count": 30,
+      "path": "docs/LIMITATIONS.md",
+      "sha256": "285bb618b3b185bef3287b063fd0f30ba07745142f3daae5848e0a8c3e283f07",
+      "token_count": 256,
+      "unique_token_count": 153
+    },
+    {
+      "bytes": 2936,
+      "line_count": 58,
+      "path": "docs/PRODUCT_PROOF_BACKBONE.md",
+      "sha256": "819c9b37eac0cd38f2ef8d273f4337ce1b63c9c0012b03a499f8c89778bcb4c9",
+      "token_count": 401,
+      "unique_token_count": 184
+    },
+    {
+      "bytes": 563,
+      "line_count": 16,
+      "path": "PROOF_LAB/README.md",
+      "sha256": "76df43246f581a36ecaa504463c8cfb41bf580086a08528f385f94aa6160f4c6",
+      "token_count": 90,
+      "unique_token_count": 45
+    },
+    {
+      "bytes": 2220,
+      "line_count": 60,
+      "path": "PROOF_LAB/docproof_cases.json",
+      "sha256": "2e53415bc2f376a1a5a14f50af44c1e2f6f438e18d63fd27df9093f1238c007e",
+      "token_count": 248,
+      "unique_token_count": 99
+    },
+    {
+      "bytes": 10378,
+      "line_count": 310,
+      "path": "PROOF_LAB/elaine_research_proof_lab.py",
+      "sha256": "533887a372c618482f7a552b773b82b9a081d177a7973c89b967dfebfc1fdfa3",
+      "token_count": 1260,
+      "unique_token_count": 311
+    },
+    {
+      "bytes": 312,
+      "line_count": 11,
+      "path": "receipts/README.md",
+      "sha256": "311e333cdf19bc17fc49e65da3cb89af11a8d153223b2259dd66cd088b924d98",
+      "token_count": 46,
+      "unique_token_count": 36
+    }
+  ],
+  "fail_count": 0,
+  "indexed_document_count": 25,
+  "limitations": [
+    "Synthetic examples only.",
+    "No public release, repository publication, provider call, hosted retrieval, deployment, counsel sharing, patent filing, or raw-secret handling is authorized.",
+    "No launch-maturity, adoption, certification, managed-security, endorsement, formal-review, citation-finality, or IP-status claim is made.",
+    "Final public use requires exact owner approval."
+  ],
+  "packet_id": "elaine-core-v0.1-local-export-v0",
+  "pass_count": 6,
+  "proof_case_count": 6,
+  "queries": [
+    {
+      "packet_id": "elaine-core-v0.1-local-export-v0",
+      "query": "proof before action",
+      "result_count": 23,
+      "results": [
+        {
+          "path": "PAPER.md",
+          "score": 47,
+          "sha256": "1ac40975424ccbfca5ca2203be45b2883ee573694557363347ba8be9c33ee8c6"
+        },
+        {
+          "path": "README.md",
+          "score": 45,
+          "sha256": "036fcba4b4617602c1ce5b722d21483816b5ba04912413cece31bae67e37bdc3"
+        },
+        {
+          "path": "PROOF_LAB/elaine_research_proof_lab.py",
+          "score": 41,
+          "sha256": "533887a372c618482f7a552b773b82b9a081d177a7973c89b967dfebfc1fdfa3"
+        },
+        {
+          "path": "CLAIM_LEDGER.md",
+          "score": 36,
+          "sha256": "939bfb38562f16562aa87d3a752887b26a1f8a025bf62c1aa097fb5d895a6d64"
+        },
+        {
+          "path": "QUICKSTART.md",
+          "score": 25,
+          "sha256": "ae42f505a63a4632e349305931773cedcb72ad50607eddb84d5be9444fa86f1e"
+        },
+        {
+          "path": "PACKAGE_MANIFEST.json",
+          "score": 23,
+          "sha256": "ff35c9691d9364d8d77ba159f73888f9ff8987fb388ed4218a01aa2c99ef84e2"
+        },
+        {
+          "path": "docs/PRODUCT_PROOF_BACKBONE.md",
+          "score": 18,
+          "sha256": "819c9b37eac0cd38f2ef8d273f4337ce1b63c9c0012b03a499f8c89778bcb4c9"
+        },
+        {
+          "path": "RELEASE_REVIEW.md",
+          "score": 16,
+          "sha256": "65bc37079e912b4641dd6bd6b4ba6be0184ec0e0e2d23d700b824cae51b58ce5"
+        },
+        {
+          "path": "PROOF_LAB/README.md",
+          "score": 15,
+          "sha256": "76df43246f581a36ecaa504463c8cfb41bf580086a08528f385f94aa6160f4c6"
+        },
+        {
+          "path": "PROOF_LAB/docproof_cases.json",
+          "score": 15,
+          "sha256": "2e53415bc2f376a1a5a14f50af44c1e2f6f438e18d63fd27df9093f1238c007e"
+        }
+      ],
+      "status": "search_complete"
+    },
+    {
+      "packet_id": "elaine-core-v0.1-local-export-v0",
+      "query": "claim downgrade",
+      "result_count": 22,
+      "results": [
+        {
+          "path": "PROOF_LAB/elaine_research_proof_lab.py",
+          "score": 50,
+          "sha256": "533887a372c618482f7a552b773b82b9a081d177a7973c89b967dfebfc1fdfa3"
+        },
+        {
+          "path": "CLAIM_LEDGER.md",
+          "score": 29,
+          "sha256": "939bfb38562f16562aa87d3a752887b26a1f8a025bf62c1aa097fb5d895a6d64"
+        },
+        {
+          "path": "PAPER.md",
+          "score": 20,
+          "sha256": "1ac40975424ccbfca5ca2203be45b2883ee573694557363347ba8be9c33ee8c6"
+        },
+        {
+          "path": "PACKAGE_MANIFEST.json",
+          "score": 19,
+          "sha256": "ff35c9691d9364d8d77ba159f73888f9ff8987fb388ed4218a01aa2c99ef84e2"
+        },
+        {
+          "path": "README.md",
+          "score": 16,
+          "sha256": "036fcba4b4617602c1ce5b722d21483816b5ba04912413cece31bae67e37bdc3"
+        },
+        {
+          "path": "SOURCE_CARDS_CANDIDATE.md",
+          "score": 10,
+          "sha256": "9382b5a0faa56d5049d5cf0640a193bfb7ac83bbac963e36ca1c130bb4413a50"
+        },
+        {
+          "path": "docs/GOVERNANCE_MODEL.md",
+          "score": 10,
+          "sha256": "51f37aee154b7a6566c392b473a17c199ba2ab0963f4fb8747863ce519a533ec"
+        },
+        {
+          "path": "PROOF_LAB/docproof_cases.json",
+          "score": 9,
+          "sha256": "2e53415bc2f376a1a5a14f50af44c1e2f6f438e18d63fd27df9093f1238c007e"
+        },
+        {
+          "path": "QUICKSTART.md",
+          "score": 9,
+          "sha256": "ae42f505a63a4632e349305931773cedcb72ad50607eddb84d5be9444fa86f1e"
+        },
+        {
+          "path": "docs/PRODUCT_PROOF_BACKBONE.md",
+          "score": 8,
+          "sha256": "819c9b37eac0cd38f2ef8d273f4337ce1b63c9c0012b03a499f8c89778bcb4c9"
+        }
+      ],
+      "status": "search_complete"
+    },
+    {
+      "packet_id": "elaine-core-v0.1-local-export-v0",
+      "query": "public release blocked",
+      "result_count": 23,
+      "results": [
+        {
+          "path": "CLAIM_LEDGER.md",
+          "score": 34,
+          "sha256": "939bfb38562f16562aa87d3a752887b26a1f8a025bf62c1aa097fb5d895a6d64"
+        },
+        {
+          "path": "PAPER.md",
+          "score": 26,
+          "sha256": "1ac40975424ccbfca5ca2203be45b2883ee573694557363347ba8be9c33ee8c6"
+        },
+        {
+          "path": "DO_NOT_CLAIM.md",
+          "score": 23,
+          "sha256": "202f81a769c68ce6c816bc093293dceb6b1340cfdee47d1ea9ebe036c67fa62a"
+        },
+        {
+          "path": "PROOF_LAB/elaine_research_proof_lab.py",
+          "score": 23,
+          "sha256": "533887a372c618482f7a552b773b82b9a081d177a7973c89b967dfebfc1fdfa3"
+        },
+        {
+          "path": "PACKAGE_MANIFEST.json",
+          "score": 20,
+          "sha256": "ff35c9691d9364d8d77ba159f73888f9ff8987fb388ed4218a01aa2c99ef84e2"
+        },
+        {
+          "path": "README.md",
+          "score": 18,
+          "sha256": "036fcba4b4617602c1ce5b722d21483816b5ba04912413cece31bae67e37bdc3"
+        },
+        {
+          "path": "PROOF_LAB/docproof_cases.json",
+          "score": 15,
+          "sha256": "2e53415bc2f376a1a5a14f50af44c1e2f6f438e18d63fd27df9093f1238c007e"
+        },
+        {
+          "path": "RELEASE_REVIEW.md",
+          "score": 15,
+          "sha256": "65bc37079e912b4641dd6bd6b4ba6be0184ec0e0e2d23d700b824cae51b58ce5"
+        },
+        {
+          "path": "docs/PRODUCT_PROOF_BACKBONE.md",
+          "score": 14,
+          "sha256": "819c9b37eac0cd38f2ef8d273f4337ce1b63c9c0012b03a499f8c89778bcb4c9"
+        },
+        {
+          "path": "docs/THREAT_MODEL.md",
+          "score": 14,
+          "sha256": "5573f25032dd70e6f55cedaa23a55cf31a2666ebf3b0999a5df126382187a7af"
+        }
+      ],
+      "status": "search_complete"
+    }
+  ],
+  "schema_version": 1,
+  "source_package_hash": "c8ff0a0f88abc87e7534ab5c7404f0d7fbe70f623ab4219a3f26a3685cdaccdc",
+  "source_scope": "sanitized_public_review_package_and_synthetic_docproof_examples_only",
+  "status": "deterministic_public_review_receipt"
+}

@@ -1,0 +1,21 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pyo
+.pytest_cache
+.mypy_cache
+.DS_Store
+Thumbs.db
+
+# Never send private Elaine OS material into Docker build context.
+app-data
+Archived*Research*
+outputs
+docs/07-testing-proof
+patent
+business
+
+# The image should generate fresh receipts during Docker proof runs.
+receipts/*.json

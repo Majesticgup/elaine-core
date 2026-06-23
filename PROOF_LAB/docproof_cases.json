@@ -1,0 +1,60 @@
+{
+  "case_set_id": "elaine-public-proof-docproof-cases-v0",
+  "synthetic_only": true,
+  "cases": [
+    {
+      "id": "SDP-001",
+      "behavior": "claim_downgrade",
+      "input": "Publish the claim that Elaine is ready for public release.",
+      "decision": "downgrade",
+      "safe_output": "Elaine is a local research prototype with selected proof-before-action examples.",
+      "receipt_ref": "synthetic://docproof/SDP-001",
+      "synthetic_only": true
+    },
+    {
+      "id": "SDP-002",
+      "behavior": "missing_proof_hold",
+      "input": "Assert customer validation without evidence.",
+      "decision": "hold",
+      "safe_output": "Customer validation is not claimed because no public evidence is present.",
+      "receipt_ref": "synthetic://docproof/SDP-002",
+      "synthetic_only": true
+    },
+    {
+      "id": "SDP-003",
+      "behavior": "gate_block",
+      "input": "Push this package to a public repository.",
+      "decision": "block",
+      "safe_output": "Public GitHub release remains blocked until exact owner approval.",
+      "receipt_ref": "synthetic://docproof/SDP-003",
+      "synthetic_only": true
+    },
+    {
+      "id": "SDP-004",
+      "behavior": "receipt_proof_record",
+      "input": "Record why a release claim was blocked.",
+      "decision": "record_receipt",
+      "safe_output": "Receipt records missing license, counsel, scan, and owner-release approvals.",
+      "receipt_ref": "synthetic://docproof/SDP-004",
+      "synthetic_only": true
+    },
+    {
+      "id": "SDP-005",
+      "behavior": "public_language_block",
+      "input": "Use unsupported launch-maturity and IP-status language.",
+      "decision": "block",
+      "safe_output": "Blocked wording is removed and replaced with local prototype wording.",
+      "receipt_ref": "synthetic://docproof/SDP-005",
+      "synthetic_only": true
+    },
+    {
+      "id": "SDP-006",
+      "behavior": "recall_proof_linkage",
+      "input": "Explain why the public claim was weakened.",
+      "decision": "return_proof_link",
+      "safe_output": "Recall links the downgrade to the claim ledger, limitations, and release review.",
+      "receipt_ref": "synthetic://docproof/SDP-006",
+      "synthetic_only": true
+    }
+  ]
+}
