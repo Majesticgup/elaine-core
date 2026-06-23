@@ -1,6 +1,6 @@
 # Elaine Core v0.1 Reviewer Feedback Form
 
-Status: CONTROLLED-ALPHA REVIEW MATERIAL / NOT PUBLIC / NOT PRODUCTION READY.
+Status: PUBLIC REVIEW MATERIAL / CONTROLLED RETURN PATH AVAILABLE / NOT PRODUCTION READY.
 
 Reviewer role:
 
@@ -9,6 +9,16 @@ Reviewer role:
 - [ ] Developer
 - [ ] Skeptical reviewer
 - [ ] AI governance reviewer
+- [ ] Engineer
+- [ ] Creative director
+- [ ] Production manager
+
+Covered perspectives:
+
+- [ ] nontechnical
+- [ ] cybersecurity
+- [ ] developer
+- [ ] skeptical
 
 ## First Read
 

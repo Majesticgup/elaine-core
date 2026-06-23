@@ -159,8 +159,8 @@ def gates_status(root: Path) -> dict[str, Any]:
     manifest = read_json(root / "PACKAGE_MANIFEST.json") or {}
     return {
         "blocked_public_actions": [
-            "GitHub proof release without A5 approval",
-            "public sharing without A5 approval",
+            "new GitHub commits, pushes, tags, or releases without owner gate",
+            "public sharing beyond the existing v0.1.0 proof package without owner gate",
             "deployment",
             "Anthropic sharing without A5 approval",
             "production/security-benefit claims",

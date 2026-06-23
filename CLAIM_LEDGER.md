@@ -4,13 +4,13 @@ Status: PUBLIC-REVIEW CANDIDATE / CLAIMS EVIDENCE-GATED
 
 | Claim ID | Public-safe claim | State | Evidence | Limit |
 |---|---|---|---|---|
-| CLM-001 | Elaine AOS is a public-review proof package for a proposed open-source local framework for governing vibe coding, AI-assisted engineering, and personal cyber-governance. | allowed | Package scope, `README.md`, `PAPER.md`, proof lab. | Proof-package/framework claim only; no security outcome claim or public-release claim. |
+| CLM-001 | Elaine AOS is a public-review proof package for a proposed open-source local framework for governing vibe coding, AI-assisted engineering, and personal cyber-governance. | allowed | Package scope, `README.md`, `PAPER.md`, proof lab, v0.1.0 public release record. | Proof-package/framework claim only; no security outcome, public-readiness, production, compliance, endorsement, or deployment claim. |
 | CLM-002 | Elaine explores proof-before-action governance for AI-assisted local workflows. | allowed | `PAPER.md`, `docs/GOVERNANCE_MODEL.md`. | Research framing, not standard adoption. |
 | CLM-003 | The proof lab runs six synthetic DocProof cases. | tested locally | `PROOF_LAB/docproof_cases.json`, receipt after run. | Synthetic only. |
 | CLM-004 | The package demonstrates claim downgrade, missing-proof abstention, gate block, receipt/proof record, public-language block, and recall/proof linkage. | tested locally | `PROOF_LAB/elaine_research_proof_lab.py run-cases`. | Demonstrates selected behavior only. |
-| CLM-005 | The package is designed as a clean public-review candidate separate from private Elaine source truth. | review candidate | Export package files and release review. | Requires final owner scan and approval before publication. |
+| CLM-005 | The package is a clean public proof package separate from private Elaine source truth. | public proof package released | Export package files, release review, v0.1.0 public release record. | Does not include the private Elaine OS workspace and does not prove production readiness or external validation. |
 | CLM-006 | Elaine is designed to make local cyber-hygiene review inputs more visible by recording evidence, authority, data boundaries, and receipts. | allowed | `README.md`, `docs/ARCHITECTURE.md`, `docs/THREAT_MODEL.md`. | Design intent only; not proof of real-world protection or security improvement. |
-| CLM-007 | Apache-2.0 is selected as the release license for this public package. | selected locally | `LICENSE`, `NOTICE.md`, `PACKAGE_MANIFEST.json`. | Public release still requires owner GitHub/public gate. |
+| CLM-007 | Apache-2.0 is selected as the release license for this public package. | selected for v0.1.0 public proof package | `LICENSE`, `NOTICE.md`, `PACKAGE_MANIFEST.json`. | Future license changes, broader publication, counsel sharing, or public-claim expansion still require owner gates. |
 | CLM-008 | Elaine has launch-maturity evidence. | blocked | No production evidence. | Do not claim. |
 | CLM-009 | Elaine has adoption or field-outcome evidence. | blocked | No public adoption or field validation included. | Do not claim. |
 | CLM-010 | Elaine has certification, managed-security, or legal-sufficiency evidence. | blocked | No certification or legal review. | Do not claim. |

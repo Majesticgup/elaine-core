@@ -1,6 +1,6 @@
 # Elaine Core v0.1 Receipt Index
 
-Status: LOCAL RECEIPT INDEX / NOT PUBLIC RELEASE EVIDENCE / NOT PRODUCTION EVIDENCE.
+Status: PUBLIC PACKAGE RECEIPT INDEX / NOT PRODUCTION EVIDENCE.
 
 This index explains which proof records are bundled with the clean package and
 which proof records must be attached separately by the controlled-alpha owner

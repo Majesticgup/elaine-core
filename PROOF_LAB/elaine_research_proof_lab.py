@@ -17,9 +17,12 @@ DEFAULT_RECEIPT = "receipts/elaine-proof-lab-receipt.json"
 DOCS = [
     "PACKAGE_MANIFEST.json",
     "README.md",
+    "DOWNLOAD_AND_REVIEW_GUIDE.md",
+    "FIRST_REVIEW_TEAM_PACKET.md",
     "QUICKSTART.md",
     "REVIEWER_GUIDE.md",
     "REVIEWER_FEEDBACK_FORM.md",
+    "REVIEWER_RETURN_TEMPLATE.json",
     "RECEIPT_INDEX.md",
     "LICENSE",
     "PAPER.md",
@@ -52,15 +55,15 @@ EXPECTED_DECISIONS = {
 }
 
 BOUNDARY_FLAGS = {
-    "public_release_authorized": False,
-    "repository_publication_authorized": False,
+    "public_release_authorized": True,
+    "repository_publication_authorized": True,
     "license_selected": True,
     "counsel_disclosure_cleared": False,
     "patent_filing_authorized": False,
     "provider_call_used": False,
     "hosted_retrieval_used": False,
-    "git_publication_authorized": False,
-    "public_sharing_authorized": False,
+    "git_publication_authorized": True,
+    "public_sharing_authorized": True,
     "raw_secret_handling_used": False,
     "external_review_authorized": False,
     "production_ready_claimed": False,
@@ -87,9 +90,9 @@ CLAIMS = [
     {
         "claim_id": "LAB-CLAIM-003",
         "claim": "Public claims can map to proof, limitation, or blocked state.",
-        "state": "review_candidate",
+        "state": "public_proof_package_released",
         "proof_refs": ["CLAIM_LEDGER.md", "DO_NOT_CLAIM.md"],
-        "limit": "Final public release still requires owner approval.",
+        "limit": "Future release expansion, external review, production readiness, security benefit, compliance, deployment, endorsement, and patent claims remain blocked without matching evidence and gates.",
     },
     {
         "claim_id": "LAB-CLAIM-004",
@@ -250,7 +253,7 @@ def build_receipt(root: Path) -> dict:
         "queries": [
             search_index(root, "proof before action"),
             search_index(root, "claim downgrade"),
-            search_index(root, "public release blocked"),
+            search_index(root, "blocked claims"),
         ],
         "command_contract": {
             "entrypoint": "PROOF_LAB/elaine_research_proof_lab.py",
@@ -261,9 +264,9 @@ def build_receipt(root: Path) -> dict:
         "boundary_flags": BOUNDARY_FLAGS,
         "limitations": [
             "Synthetic examples only.",
-            "No public release, repository publication, provider call, hosted retrieval, deployment, counsel sharing, patent filing, or raw-secret handling is authorized.",
+            "Elaine Core v0.1 is released as a public proof package; provider calls, hosted retrieval, deployment, counsel sharing, patent filing, raw-secret handling, and new public/Git actions still require their own gates.",
             "No launch-maturity, adoption, certification, managed-security, endorsement, formal-review, citation-finality, or IP-status claim is made.",
-            "Final public use requires exact owner approval.",
+            "Controlled external review, production readiness, security-benefit claims, and broader public-readiness claims require returned evidence and exact owner gates.",
         ],
     }
     return receipt

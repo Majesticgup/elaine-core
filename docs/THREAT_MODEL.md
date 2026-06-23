@@ -28,7 +28,7 @@
 - Do-not-claim list.
 - Synthetic proof lab.
 - Release review checklist.
-- Apache-2.0 license posture with public release still gated.
+- Apache-2.0 license posture for the v0.1.0 public proof package, with future release expansion still gated.
 - Public/private disclosure notice.
 - Vibe-coding safety rules.
 

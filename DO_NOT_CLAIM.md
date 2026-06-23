@@ -18,7 +18,7 @@ Do not use this package to claim:
 - Blocked: citation completeness;
 - Blocked: patent protection;
 - Blocked: filing readiness;
-- Blocked: public release approval;
+- Blocked: broader public readiness or future release approval beyond the v0.1.0 public proof package;
 - Blocked: independent security validation;
 - Blocked: broad reliability beyond selected synthetic cases.
 

@@ -1,6 +1,6 @@
 # Elaine Core v0.1 Reviewer Guide
 
-Status: CONTROLLED-ALPHA REVIEW MATERIAL / NOT PUBLIC / NOT PRODUCTION READY.
+Status: PUBLIC REVIEW MATERIAL / CONTROLLED RETURN PATH AVAILABLE / NOT PRODUCTION READY.
 
 ## What You Are Reviewing
 
@@ -24,6 +24,11 @@ deployment readiness, legal posture, patent status, or real-world protection.
 | Developer | Can you run the proof lab without undocumented steps? |
 | Skeptical reviewer | What sounds inflated, vague, or confusing? |
 | AI governance reviewer | Are human oversight and limits clear? |
+| Engineer | Can the package be run and inspected without undocumented help? |
+| Creative director | Is the story, tone, trust posture, and onboarding path clear? |
+| Production manager | Is the review process executable, trackable, and closable? |
+
+For the first three-reviewer wave, see `FIRST_REVIEW_TEAM_PACKET.md`.
 
 ## Review Rules
 
@@ -42,6 +47,7 @@ Provide:
 3. the top three unsupported or risky claims;
 4. the proof-lab run result;
 5. whether the limitations were clear;
-6. a go/no-go recommendation for wider controlled reviewer testing.
+6. a go/no-go recommendation for wider controlled reviewer testing;
+7. a completed `REVIEWER_RETURN_TEMPLATE.json` if you are part of controlled review.
 
-Start with `QUICKSTART.md` if the package feels too large.
+Start with `DOWNLOAD_AND_REVIEW_GUIDE.md` if the package feels too large.

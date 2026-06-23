@@ -6,6 +6,24 @@ This is the shortest path for a first-time reviewer. It should work from the
 package root without private Elaine OS workspace access, API keys, provider
 accounts, or network access.
 
+## 0. Pick Your Review Path
+
+If you downloaded this from GitHub, start with:
+
+```text
+DOWNLOAD_AND_REVIEW_GUIDE.md
+```
+
+If you are one of the first three reviewers, also read:
+
+```text
+FIRST_REVIEW_TEAM_PACKET.md
+```
+
+Use `REVIEWER_FEEDBACK_FORM.md` for human-readable feedback. If you are part
+of a controlled review round, also complete `REVIEWER_RETURN_TEMPLATE.json` so
+the internal intake path can classify perspective coverage and findings.
+
 ## 1. Read The Boundary First
 
 Before running commands, read:

@@ -1,12 +1,37 @@
 # Elaine AOS Public-Review Proof Package
 
-Status: PUBLIC-REVIEW CANDIDATE / NOT PUBLISHED / NOT PEER REVIEWED / NOT PRODUCTION READY
+Status: PUBLIC PROOF PACKAGE RELEASED / NOT PEER REVIEWED / NOT PRODUCTION READY
 
 Elaine AOS is a public-review proof package for a proposed open-source local framework that makes vibe coding, AI-assisted engineering, and personal cyber-governance more evidence-bound, gate-controlled, and reviewable. The package models how evidence records, proof receipts, AI action gates, and data-boundary discipline could be made inspectable on individual systems.
 
 The long-term purpose is broader than an app. Elaine explores a local framework for recording evidence about requests, claims, boundaries, receipts, and AI-assisted actions before they become disclosures or system changes. Today it is a portfolio-grade proof package; over time it may mature into an embedded pattern for deploying, securing, and governing automation.
 
 This public-review package is intentionally narrow. It is not the full private Elaine OS workspace and it does not claim completed security protection. It contains public-safe manuscript material, a claim ledger, limitation notes, and a standard-library proof lab that runs on synthetic examples only.
+
+## Start Here If You Downloaded This From GitHub
+
+Use these files in order:
+
+```text
+DOWNLOAD_AND_REVIEW_GUIDE.md
+QUICKSTART.md
+REVIEWER_GUIDE.md
+REVIEWER_FEEDBACK_FORM.md
+REVIEWER_RETURN_TEMPLATE.json
+```
+
+For the first expected review wave, use:
+
+```text
+FIRST_REVIEW_TEAM_PACKET.md
+```
+
+That packet gives tailored instructions for an engineer, creative director,
+and production manager. It also explains how three reviewers can cover the
+required `developer`, `cybersecurity`, `nontechnical`, and `skeptical`
+perspectives. If the engineer cannot credibly cover the cybersecurity
+perspective, add a fourth cybersecurity reviewer before treating perspective
+coverage as complete.
 
 ## What This Package Shows
 
@@ -30,13 +55,15 @@ Elaine does not claim that it has proven security outcomes for users. The safe c
 
 ## Quick Start
 
-For the shortest reviewer path, start with `QUICKSTART.md`.
+For the shortest reviewer path, start with `DOWNLOAD_AND_REVIEW_GUIDE.md`,
+then use `QUICKSTART.md`.
 
 For the review workflow and feedback format, use:
 
 ```text
 REVIEWER_GUIDE.md
 REVIEWER_FEEDBACK_FORM.md
+REVIEWER_RETURN_TEMPLATE.json
 RECEIPT_INDEX.md
 ```
 
@@ -100,7 +127,11 @@ cross-platform claim.
 
 ## Public Review Boundary
 
-This package is prepared for local public-release review only. It uses Apache-2.0 as the selected release license, but it still requires owner approval before GitHub creation, Git commit, push, public sharing, publication, deployment, counsel sharing, or external review.
+This package is a public proof package. New Git commits, pushes, releases,
+deployments, counsel sharing, controlled reviewer sharing, or broader public
+claims still require the appropriate owner gate. The public release does not
+unlock production-readiness, security-benefit, compliance, endorsement,
+deployment, or patent-protection claims.
 
 ## Product Proof Appendix
 
