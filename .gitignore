@@ -13,5 +13,11 @@ secrets/
 receipts/*secret*
 receipts/*private*
 receipts/*token*
+receipts/install-summary.json
+receipts/install-proof-lab-receipt.json
+receipts/install-runtime-doctor-receipt.json
 logs/
 *.log
+__pycache__/
+*/__pycache__/
+*.pyc

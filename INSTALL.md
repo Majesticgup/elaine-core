@@ -1,6 +1,6 @@
 # Elaine Core v0.1 Install Guide
 
-Elaine Core v0.1 is a controlled-alpha proof package. It is meant to be run from a clean folder so a reviewer can inspect the proof lab, Runtime Core CLI, receipts, and limitations without access to the private Elaine OS workspace.
+Elaine Core v0.1 is a controlled-alpha proof package. It is meant to be verified from a clean folder without access to the private Elaine OS workspace.
 
 ## Requirements
 
@@ -11,6 +11,45 @@ Elaine Core v0.1 is a controlled-alpha proof package. It is meant to be run from
 ## Quick Install Check
 
 From the package root:
+
+```powershell
+python verify_install.py
+```
+
+On Linux/macOS:
+
+```bash
+python3 verify_install.py
+```
+
+Expected output is five lines or fewer and includes:
+
+```text
+ELAINE_INSTALL_CHECK=PASS
+receipt=receipts/install-summary.json
+```
+
+For machine-readable output:
+
+```powershell
+python verify_install.py --json
+```
+
+## What The Verifier Does
+
+- Confirms Python 3.11 or newer.
+- Confirms the proof lab and Runtime Core scripts exist.
+- Runs the six synthetic proof cases.
+- Runs Runtime Core doctor.
+- Writes `receipts/install-summary.json`.
+- Writes `receipts/install-proof-lab-receipt.json`.
+- Writes `receipts/install-runtime-doctor-receipt.json`.
+
+No AI agent is required for normal install verification.
+
+## Direct Checks
+
+These are the underlying checks that `verify_install.py` runs:
 
 ```powershell
 python PROOF_LAB\elaine_research_proof_lab.py run-cases --out receipts\install-proof-lab-receipt.json
@@ -28,8 +67,15 @@ python3 RUNTIME_CORE/elaine_runtime_core.py doctor --out receipts/install-runtim
 
 - Proof lab exits `0`.
 - Runtime Core CLI exits `0`.
-- Receipts are written under `receipts/`.
+- Install receipts are written under `receipts/`.
 - No network, provider, hosted retrieval, Git, deployment, or public sharing is required.
+
+## Agent Verification
+
+If a user chooses to involve Codex or another coding agent, give the agent
+`INSTALL_AGENT.md` or `CODEX_FREE_PROMPT.txt`. The agent should run only
+`python --version` and `python verify_install.py --json`, then stop if the
+status is `pass`.
 
 ## What This Does Not Install
 

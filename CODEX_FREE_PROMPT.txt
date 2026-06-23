@@ -1,0 +1,12 @@
+Goal: verify Elaine Core v0.1 from the extracted package with minimal usage.
+
+Do not audit the repository, review claims, or print file contents.
+Run only:
+1. python --version
+2. python verify_install.py --json
+
+Success means exit code 0 and JSON status=pass. If successful, stop and report only status, Python version, check results, and receipt path.
+
+If it fails, inspect only the failed check or missing file named in the JSON. Maximum three total tool calls.
+
+No network, package installs, Docker, Git, secrets, provider calls, recursive search, or broad source review.

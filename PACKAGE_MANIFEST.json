@@ -28,6 +28,10 @@
   "required_files": [
     "PACKAGE_MANIFEST.json",
     ".gitignore",
+    "START_HERE.md",
+    "verify_install.py",
+    "INSTALL_AGENT.md",
+    "CODEX_FREE_PROMPT.txt",
     "README.md",
     "DOWNLOAD_AND_REVIEW_GUIDE.md",
     "GUIDED_SETUP_AND_SECRET_ENTRY.md",
@@ -91,6 +95,22 @@
     "runtime_app_data_included": false,
     "field_security_claimed": false,
     "production_ready_claimed": false
+  },
+  "install_verifier": {
+    "included": true,
+    "path": "verify_install.py",
+    "start_here_path": "START_HERE.md",
+    "agent_contract_path": "INSTALL_AGENT.md",
+    "codex_prompt_path": "CODEX_FREE_PROMPT.txt",
+    "normal_install_requires_model": false,
+    "network_used": false,
+    "packages_installed": false,
+    "provider_call_used": false,
+    "expected_summary_receipt": "receipts/install-summary.json",
+    "expected_proof_lab_receipt": "receipts/install-proof-lab-receipt.json",
+    "expected_runtime_doctor_receipt": "receipts/install-runtime-doctor-receipt.json",
+    "agent_max_tool_calls": 3,
+    "claim_ceiling": "deterministic install verification only; not production runtime installation, security validation, deployment, or external validation"
   },
   "guided_setup_and_secret_entry": {
     "included": true,

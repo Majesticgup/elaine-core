@@ -13,6 +13,8 @@ This public-review package is intentionally narrow. It is not the full private E
 Use these files in order:
 
 ```text
+START_HERE.md
+INSTALL.md
 DOWNLOAD_AND_REVIEW_GUIDE.md
 GUIDED_SETUP_AND_SECRET_ENTRY.md
 QUICKSTART.md
@@ -56,8 +58,20 @@ Elaine does not claim that it has proven security outcomes for users. The safe c
 
 ## Quick Start
 
-For the shortest reviewer path, start with `DOWNLOAD_AND_REVIEW_GUIDE.md`,
-then use `QUICKSTART.md`.
+For normal install verification, start with:
+
+```bash
+python verify_install.py
+```
+
+That command runs the proof cases and Runtime Core doctor, writes
+`receipts/install-summary.json`, and prints five lines or fewer. It uses no
+network, provider account, package install, Docker, Git, model call, hosted
+retrieval, API key, or private Elaine OS workspace.
+
+For the shortest reviewer path, start with `DOWNLOAD_AND_REVIEW_GUIDE.md`, then
+use `QUICKSTART.md`. Reviewer/security review is a separate opt-in path, not
+the install path.
 
 For the review workflow and feedback format, use:
 

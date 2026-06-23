@@ -17,6 +17,10 @@ DEFAULT_RECEIPT = "receipts/elaine-proof-lab-receipt.json"
 DOCS = [
     "PACKAGE_MANIFEST.json",
     ".gitignore",
+    "START_HERE.md",
+    "verify_install.py",
+    "INSTALL_AGENT.md",
+    "CODEX_FREE_PROMPT.txt",
     "README.md",
     "DOWNLOAD_AND_REVIEW_GUIDE.md",
     "GUIDED_SETUP_AND_SECRET_ENTRY.md",
@@ -118,6 +122,13 @@ CLAIMS = [
         "state": "source_prepared",
         "proof_refs": ["docs/GITHUB_SECURITY_AUDIT_PLAN.md"],
         "limit": "This is audit preparation only; it does not prove live GitHub settings, remediation, security outcomes, compliance, or production readiness.",
+    },
+    {
+        "claim_id": "LAB-CLAIM-007",
+        "claim": "A zero-credit install verifier and agent stop contract are included.",
+        "state": "source_prepared",
+        "proof_refs": ["START_HERE.md", "verify_install.py", "INSTALL_AGENT.md", "CODEX_FREE_PROMPT.txt"],
+        "limit": "This proves the package includes a deterministic verifier path; it does not prove production runtime installation, security outcomes, deployment, or external validation.",
     },
 ]
 
@@ -290,15 +301,19 @@ def build_receipt(root: Path) -> dict:
     return receipt
 
 
-def export_manifest(root: Path, out: str) -> dict:
-    receipt = build_receipt(root)
+def write_json_in_package(root: Path, out: str, value: dict) -> None:
     out_path = (root / out).resolve()
     try:
         out_path.relative_to(root)
     except ValueError:
         fail("Refusing to write outside package root")
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(receipt, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    out_path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def export_manifest(root: Path, out: str) -> dict:
+    receipt = build_receipt(root)
+    write_json_in_package(root, out, receipt)
     return receipt
 
 
@@ -311,7 +326,7 @@ def main() -> None:
     parser.add_argument("command", choices=["index", "search", "show-claim", "run-cases", "export-manifest"])
     parser.add_argument("--query", default="proof before action")
     parser.add_argument("--claim", default="LAB-CLAIM-001")
-    parser.add_argument("--out", default=DEFAULT_RECEIPT)
+    parser.add_argument("--out", default="")
     args = parser.parse_args()
 
     root = package_root()
@@ -322,9 +337,12 @@ def main() -> None:
     elif args.command == "show-claim":
         emit(show_claim(args.claim))
     elif args.command == "run-cases":
-        emit(run_cases(root))
+        result = run_cases(root)
+        if args.out:
+            write_json_in_package(root, args.out, result)
+        emit(result)
     elif args.command == "export-manifest":
-        emit(export_manifest(root, args.out))
+        emit(export_manifest(root, args.out or DEFAULT_RECEIPT))
 
 
 if __name__ == "__main__":

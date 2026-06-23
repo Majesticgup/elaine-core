@@ -7,6 +7,15 @@ what to do next. The goal is not to install a production product. The goal is
 to inspect a public proof package, run the local proof lab, and return feedback
 that helps decide what claims are supported, unclear, or blocked.
 
+If you only need install verification, stop here and run:
+
+```bash
+python verify_install.py
+```
+
+Use this reviewer guide only when you intentionally want to evaluate the proof
+package and return feedback.
+
 ## What You Have
 
 Elaine Core v0.1 is a public proof package for a proposed local governance

@@ -6,11 +6,23 @@ This is the shortest path for a first-time reviewer. It should work from the
 package root without private Elaine OS workspace access, API keys, provider
 accounts, or network access.
 
+## Install Verification First
+
+If you only need to verify the package, run:
+
+```bash
+python verify_install.py
+```
+
+Then stop if it reports `ELAINE_INSTALL_CHECK=PASS`. No AI agent, security
+review, Docker run, Git action, provider call, or source audit is required.
+
 ## 0. Pick Your Review Path
 
 If you downloaded this from GitHub, start with:
 
 ```text
+START_HERE.md
 DOWNLOAD_AND_REVIEW_GUIDE.md
 GUIDED_SETUP_AND_SECRET_ENTRY.md
 ```

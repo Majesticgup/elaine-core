@@ -4,6 +4,10 @@ All notable Elaine Core package changes are recorded here.
 
 ## 0.1.0-alpha - 2026-06-22
 
+- Added zero-credit install verification through `verify_install.py`,
+  `START_HERE.md`, `INSTALL_AGENT.md`, and `CODEX_FREE_PROMPT.txt`.
+- Fixed `PROOF_LAB/elaine_research_proof_lab.py run-cases --out` so the
+  documented install proof-lab receipt is written.
 - Added guided setup and local redacted secret-entry prompt documentation for
   future controlled setup lanes while keeping v0.1 no-secret by default.
 - Added a read-only GitHub security audit plan for repository/account posture
