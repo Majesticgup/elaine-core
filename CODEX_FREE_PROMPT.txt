@@ -1,12 +1,17 @@
-Goal: verify Elaine Core v0.1 from the extracted package with minimal usage.
+TASK: Verify the Elaine Core v0.1 synthetic proof package only.
 
-Do not audit the repository, review claims, or print file contents.
-Run only:
+This is not a source-security audit, Claude/Codex integration, or full alpha exercise.
+The owner explicitly authorizes these two commands. Run only:
+
 1. python --version
 2. python verify_install.py --json
 
-Success means exit code 0 and JSON status=pass. If successful, stop and report only status, Python version, check results, and receipt path.
+If the result is status=pass, stop immediately. Report only status, Python version,
+check results, and the summary receipt path. Do not repeat command output.
 
-If it fails, inspect only the failed check or missing file named in the JSON. Maximum three total tool calls.
+If policy requires source inspection before execution, inspect only verify_install.py
+and the exact local Python files it invokes. Do not read review, claim, architecture,
+Docker, secret-entry, or publication documents unless a named verification check fails.
 
-No network, package installs, Docker, Git, secrets, provider calls, recursive search, or broad source review.
+Limits: Maximum three total tool calls, three source files. No network, package installs, Docker, Git, secrets, provider calls,
+and no full receipt output. Keep the final answer under 220 words.

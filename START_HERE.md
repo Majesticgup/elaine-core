@@ -51,3 +51,24 @@ REVIEWER_RETURN_TEMPLATE.json
 Security review, claim review, Docker proof, GitHub audit, and production
 readiness review are separate opt-in workflows. They are not part of ordinary
 install verification.
+
+## Controlled Installation Is A Separate Gate
+
+If a future user decides they are comfortable letting Elaine take a more active
+role in setup, read:
+
+```text
+docs/CONTROLLED_INSTALLATION_GOVERNANCE.md
+config/install-control-policy.json
+```
+
+Before any host-changing setup work, run the read-only baseline:
+
+```bash
+python tools/elaine_security_baseline_check.py
+```
+
+That check is SCAP/STIG-inspired, but it is not formal SCAP content, not a DISA
+STIG result, not a compliance result, and not a security certification. It
+exists to confirm that gates, rollback planning, receipts, secret boundaries,
+and blocked claims are present before any future controlled execution lane.

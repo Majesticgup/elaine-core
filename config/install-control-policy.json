@@ -1,0 +1,103 @@
+{
+  "schema_version": "elaine.install-control-policy.v1",
+  "claim_boundary": "Governed installation control plan only; not a production installer, formal SCAP scan, STIG certification, compliance result, security-benefit claim, or deployment proof.",
+  "normal_verification": {
+    "mode": "verify_only",
+    "required_command": "python verify_install.py",
+    "model_calls_allowed": 0,
+    "network_allowed": false,
+    "provider_calls_allowed": false,
+    "package_installs_allowed": false,
+    "git_actions_allowed": false,
+    "docker_allowed": false,
+    "host_changes_allowed": false,
+    "stop_on_pass": true
+  },
+  "agent_assisted_failure_diagnosis": {
+    "mode": "diagnose_failed_check_only",
+    "max_tool_calls": 3,
+    "max_source_files_read": 3,
+    "max_tool_output_bytes_per_call": 4096,
+    "full_receipts_in_context": false,
+    "stop_on_pass": true
+  },
+  "controlled_install_execution": {
+    "mode": "future_a3_controlled_execution",
+    "available_in_v0_1": false,
+    "requires_exact_owner_gate": "A3",
+    "required_gate_fields": [
+      "target",
+      "action",
+      "allowed_commands_or_script",
+      "data_class",
+      "rollback_path",
+      "checks",
+      "proof_path",
+      "expiry",
+      "blocked_actions",
+      "stop_conditions"
+    ],
+    "preflight_required": true,
+    "preflight_command": "python tools/elaine_security_baseline_check.py --json",
+    "dry_run_required_before_host_change": true,
+    "receipt_required": true,
+    "rollback_required": true,
+    "blocked_without_gate": [
+      "installing packages",
+      "changing system, account, firewall, service, browser, SSH, Git, or provider settings",
+      "starting persistent services",
+      "writing secrets",
+      "calling hosted providers",
+      "deploying or publicly sharing",
+      "claiming production readiness, compliance, security benefit, SOC/MDR, endorsement, or patent protection"
+    ]
+  },
+  "security_baseline": {
+    "kind": "SCAP/STIG-inspired read-only readiness checklist",
+    "formal_scap_content": false,
+    "formal_stig_result": false,
+    "external_validation_claimed": false,
+    "controls": [
+      {
+        "id": "ELN-BASE-001",
+        "title": "Zero-credit verification stays separate from security review",
+        "evidence": "verify_install.py and config/credit-policy.json"
+      },
+      {
+        "id": "ELN-BASE-002",
+        "title": "Host-changing installation requires exact A3 gate",
+        "evidence": "config/install-control-policy.json"
+      },
+      {
+        "id": "ELN-BASE-003",
+        "title": "Security baseline preflight runs before controlled execution",
+        "evidence": "tools/elaine_security_baseline_check.py"
+      },
+      {
+        "id": "ELN-BASE-004",
+        "title": "Rollback, proof path, checks, expiry, and blocked actions are mandatory gate fields",
+        "evidence": "config/install-control-policy.json"
+      },
+      {
+        "id": "ELN-BASE-005",
+        "title": "Generated receipts and local context cache are ignored by Git",
+        "evidence": ".gitignore"
+      },
+      {
+        "id": "ELN-BASE-006",
+        "title": "Secrets are not required for v0.1 verification and raw secrets are not persisted by helper",
+        "evidence": "GUIDED_SETUP_AND_SECRET_ENTRY.md and tools/Start-ElaineGuidedSecretPrompt.ps1"
+      },
+      {
+        "id": "ELN-BASE-007",
+        "title": "Context compaction preserves source code and short outputs unchanged",
+        "evidence": "tools/elaine_context_guard.py and tests/test_context_guard.py"
+      },
+      {
+        "id": "ELN-BASE-008",
+        "title": "Formal SCAP/STIG/compliance claims are blocked until separately validated",
+        "evidence": "docs/CONTROLLED_INSTALLATION_GOVERNANCE.md"
+      }
+    ]
+  }
+}

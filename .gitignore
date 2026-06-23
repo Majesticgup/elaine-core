@@ -16,8 +16,12 @@ receipts/*token*
 receipts/install-summary.json
 receipts/install-proof-lab-receipt.json
 receipts/install-runtime-doctor-receipt.json
+receipts/security-baseline-readiness.json
+receipts/context-guard*.json
+receipts/transcript-credit-audit*.json
 logs/
 *.log
+.elaine-context-cache/
 __pycache__/
 */__pycache__/
 *.pyc

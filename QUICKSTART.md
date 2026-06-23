@@ -17,12 +17,23 @@ python verify_install.py
 Then stop if it reports `ELAINE_INSTALL_CHECK=PASS`. No AI agent, security
 review, Docker run, Git action, provider call, or source audit is required.
 
+If you are evaluating whether Elaine could safely guide a future installation
+lane, run the read-only control baseline after verification:
+
+```bash
+python tools/elaine_security_baseline_check.py
+```
+
+This is a SCAP/STIG-inspired readiness check only. It does not install
+anything, change settings, certify compliance, or prove security outcomes.
+
 ## 0. Pick Your Review Path
 
 If you downloaded this from GitHub, start with:
 
 ```text
 START_HERE.md
+docs/CONTROLLED_INSTALLATION_GOVERNANCE.md
 DOWNLOAD_AND_REVIEW_GUIDE.md
 GUIDED_SETUP_AND_SECRET_ENTRY.md
 ```

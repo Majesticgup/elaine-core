@@ -15,6 +15,7 @@ Use these files in order:
 ```text
 START_HERE.md
 INSTALL.md
+docs/CONTROLLED_INSTALLATION_GOVERNANCE.md
 DOWNLOAD_AND_REVIEW_GUIDE.md
 GUIDED_SETUP_AND_SECRET_ENTRY.md
 QUICKSTART.md
@@ -69,6 +70,16 @@ That command runs the proof cases and Runtime Core doctor, writes
 network, provider account, package install, Docker, Git, model call, hosted
 retrieval, API key, or private Elaine OS workspace.
 
+For the quietest machine-readable path:
+
+```bash
+python verify_install.py --quiet
+python verify_install.py --json
+```
+
+The JSON summary includes SHA-256 hashes for the two local executable scripts
+that the verifier invokes.
+
 For the shortest reviewer path, start with `DOWNLOAD_AND_REVIEW_GUIDE.md`, then
 use `QUICKSTART.md`. Reviewer/security review is a separate opt-in path, not
 the install path.
@@ -115,6 +126,27 @@ powershell -ExecutionPolicy Bypass -File tools\Start-ElaineGuidedSecretPrompt.ps
 It is a local prompt helper only. It does not authenticate to GitHub, call a
 provider, install software, change account settings, persist the secret, or
 push to Git.
+
+## Controlled Installation Governance
+
+Elaine Core v0.1 does not take control of the host installation process. The
+governed path for future host-changing setup is documented in
+`docs/CONTROLLED_INSTALLATION_GOVERNANCE.md` and enforced by
+`config/install-control-policy.json`.
+
+Before any future controlled execution lane, run:
+
+```bash
+python tools/elaine_security_baseline_check.py
+```
+
+That baseline is SCAP/STIG-inspired only. It checks whether the package has
+gates, rollback requirements, receipts, secret boundaries, ignored generated
+evidence, and blocked claims in place. It does not certify compliance, security
+benefit, production readiness, or deployment readiness.
+
+Optional credit-control tools are in `tools/elaine_context_guard.py` and
+`tools/transcript_credit_audit.py`. They are not part of normal installation.
 
 ## Runtime Core CLI
 

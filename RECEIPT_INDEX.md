@@ -26,6 +26,16 @@ package:
 | `receipts/install-proof-lab-receipt.json` | `run-cases --out` wrote the synthetic proof-case result. | Field security outcomes or full proof-lab manifest export. |
 | `receipts/install-runtime-doctor-receipt.json` | Runtime Core doctor passed for the clean package. | Runtime service, API, MCP server, model call, private RAG, or workstation control readiness. |
 
+## Generated Baseline And Credit Receipts
+
+These optional local tools are not part of ordinary installation verification:
+
+| Receipt | What it proves | What it does not prove |
+| --- | --- | --- |
+| `receipts/security-baseline-readiness.json` | The read-only controlled-installation baseline checked gates, rollback requirements, secret boundaries, ignored generated evidence, and blocked claims. | Formal SCAP/STIG compliance, certification, security validation, production readiness, host hardening, or deployment. |
+| `receipts/context-guard*.json` | A local context compaction or audit run recorded byte counts, strategy, and retrieval reference when applicable. | Billed-token savings, model behavior, source-security review, or proof that all future transcripts are optimized. |
+| `receipts/transcript-credit-audit*.json` | A local transcript audit counted approximate size and credit-waste signals. | Actual provider billing, comprehensive usage accounting, or correctness of an agent's work. |
+
 ## Optional Local Prompt Receipt
 
 `tools/Start-ElaineGuidedSecretPrompt.ps1` can write

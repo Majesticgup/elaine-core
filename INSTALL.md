@@ -47,6 +47,31 @@ python verify_install.py --json
 
 No AI agent is required for normal install verification.
 
+For minimal terminal output:
+
+```powershell
+python verify_install.py --quiet
+```
+
+The JSON output uses `elaine.install-summary.v2` and includes the SHA-256
+hashes of the local executable scripts invoked by the verifier.
+
+## Controlled Installation Preflight
+
+Elaine Core v0.1 does not install or configure a live runtime. If a future
+setup lane asks Elaine to take control of installation steps, read
+`docs/CONTROLLED_INSTALLATION_GOVERNANCE.md` and run the read-only baseline:
+
+```powershell
+python tools\elaine_security_baseline_check.py
+```
+
+That baseline is SCAP/STIG-inspired, not a formal SCAP scan, STIG result,
+compliance result, security validation, or production-readiness proof.
+Host-changing installation work remains blocked unless an exact A3 owner gate
+names the target, action, allowed commands or script, rollback path, checks,
+proof path, expiry, blocked actions, and stop conditions.
+
 ## Direct Checks
 
 These are the underlying checks that `verify_install.py` runs:

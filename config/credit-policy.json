@@ -1,0 +1,36 @@
+{
+  "schema_version": "elaine.credit-policy.v2",
+  "normal_verification": {
+    "model_calls_allowed": 0,
+    "network_allowed": false,
+    "commands_expected": 1,
+    "terminal_output_max_bytes": 1200,
+    "summary_receipt_max_bytes": 4096,
+    "stop_on_pass": true
+  },
+  "agent_assisted_failure_diagnosis": {
+    "model_tier": "smallest validated coding model",
+    "reasoning": "low",
+    "max_tool_calls": 3,
+    "max_source_files_read": 3,
+    "max_tool_output_bytes_per_call": 4096,
+    "max_final_words": 220,
+    "stop_on_pass": true,
+    "full_receipts_in_context": false
+  },
+  "source_security_review": {
+    "separate_opt_in_lane": true,
+    "budget_required": true,
+    "normal_install_dependency": false
+  },
+  "context_rules": {
+    "short_content_passthrough": true,
+    "source_code_passthrough": true,
+    "preserve_errors_and_anomalies": true,
+    "lossless_before_lossy": true,
+    "local_retrieval_cache": true,
+    "fail_open_to_original": true,
+    "dynamic_context_at_prompt_tail": true,
+    "never_echo_tool_output_in_final": true
+  }
+}

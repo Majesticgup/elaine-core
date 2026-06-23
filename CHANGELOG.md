@@ -6,6 +6,13 @@ All notable Elaine Core package changes are recorded here.
 
 - Added zero-credit install verification through `verify_install.py`,
   `START_HERE.md`, `INSTALL_AGENT.md`, and `CODEX_FREE_PROMPT.txt`.
+- Added `elaine.install-summary.v2` executable-surface hashes and `--quiet`
+  output for low-noise verification.
+- Added dependency-free credit-control policy, transcript audit tooling, and
+  reversible local context compaction without installing Headroom.
+- Added controlled-installation governance and a SCAP/STIG-inspired read-only
+  baseline check for future gated installer work, without claiming formal
+  SCAP/STIG/compliance/security validation.
 - Fixed `PROOF_LAB/elaine_research_proof_lab.py run-cases --out` so the
   documented install proof-lab receipt is written.
 - Added guided setup and local redacted secret-entry prompt documentation for
