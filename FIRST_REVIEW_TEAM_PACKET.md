@@ -18,6 +18,10 @@ access or creator explanation.
 - Do not ask for private Elaine OS workspace access.
 - Do not use secrets, API keys, private accounts, provider calls, or hosted
   retrieval.
+- Do not paste passwords, API keys, GitHub tokens, SSH private keys, or
+  passphrases into chat, docs, GitHub issues, screenshots, receipts, or reviewer
+  returns. If a future controlled setup lane requires a sensitive value, use
+  `GUIDED_SETUP_AND_SECRET_ENTRY.md`.
 - Do not treat the package as production-ready or security-validated.
 - Do not reshare a controlled reviewer bundle unless the owner separately
   authorizes it.
@@ -59,6 +63,8 @@ Do:
 5. If you are covering `cybersecurity`, pressure-test every security-adjacent
    phrase against `DO_NOT_CLAIM.md`, `docs/THREAT_MODEL.md`, and
    `docs/LIMITATIONS.md`.
+6. Check `GUIDED_SETUP_AND_SECRET_ENTRY.md` and confirm that any future
+   credential step would be user-led, local-terminal-only, and redacted.
 
 Return:
 
@@ -107,6 +113,9 @@ Do:
    reviewer feedback.
 4. Check whether a reviewer can complete the work without owner explanation.
 5. Confirm whether the role coverage is enough for the current gate.
+6. Check whether the guided setup questionnaire is short enough for scheduling
+   and intake: password manager or manual, setup target, persistence preference,
+   receipt path, and stop condition.
 
 Return:
 

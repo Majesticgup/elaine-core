@@ -16,8 +16,10 @@ CASE_FILE = "PROOF_LAB/docproof_cases.json"
 DEFAULT_RECEIPT = "receipts/elaine-proof-lab-receipt.json"
 DOCS = [
     "PACKAGE_MANIFEST.json",
+    ".gitignore",
     "README.md",
     "DOWNLOAD_AND_REVIEW_GUIDE.md",
+    "GUIDED_SETUP_AND_SECRET_ENTRY.md",
     "FIRST_REVIEW_TEAM_PACKET.md",
     "QUICKSTART.md",
     "REVIEWER_GUIDE.md",
@@ -39,9 +41,11 @@ DOCS = [
     "docs/GOVERNANCE_MODEL.md",
     "docs/LIMITATIONS.md",
     "docs/PRODUCT_PROOF_BACKBONE.md",
+    "docs/GITHUB_SECURITY_AUDIT_PLAN.md",
     "PROOF_LAB/README.md",
     CASE_FILE,
     "PROOF_LAB/elaine_research_proof_lab.py",
+    "tools/Start-ElaineGuidedSecretPrompt.ps1",
     "receipts/README.md",
 ]
 
@@ -100,6 +104,20 @@ CLAIMS = [
         "state": "tested_locally",
         "proof_refs": ["docs/PRODUCT_PROOF_BACKBONE.md", "receipts/elaine-proof-lab-receipt.json"],
         "limit": "This proves a local summary exists and is indexed; it does not prove field security outcomes.",
+    },
+    {
+        "claim_id": "LAB-CLAIM-005",
+        "claim": "A guided setup and secret-entry pattern is documented for future controlled lanes.",
+        "state": "source_prepared",
+        "proof_refs": ["GUIDED_SETUP_AND_SECRET_ENTRY.md", "tools/Start-ElaineGuidedSecretPrompt.ps1"],
+        "limit": "This proves a redacted prompt pattern exists; it does not prove authentication, account security, provider access, password-manager replacement, or production readiness.",
+    },
+    {
+        "claim_id": "LAB-CLAIM-006",
+        "claim": "A read-only GitHub security audit plan is included.",
+        "state": "source_prepared",
+        "proof_refs": ["docs/GITHUB_SECURITY_AUDIT_PLAN.md"],
+        "limit": "This is audit preparation only; it does not prove live GitHub settings, remediation, security outcomes, compliance, or production readiness.",
     },
 ]
 

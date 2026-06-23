@@ -35,3 +35,10 @@ python3 RUNTIME_CORE/elaine_runtime_core.py doctor --out receipts/install-runtim
 
 This package does not install a persistent service, MCP server, model runtime, endpoint monitor, SIEM connector, private RAG index, or autonomous workstation controller.
 
+## Guided Setup Note
+
+Elaine Core v0.1 does not need passwords, API keys, GitHub tokens, SSH private
+keys, or provider credentials. If a future controlled setup path asks for a
+sensitive value, read `GUIDED_SETUP_AND_SECRET_ENTRY.md` first. The expected
+pattern is user-led: choose password-manager or manual entry, paste the value
+only into a local hidden terminal prompt, and keep the receipt redacted.

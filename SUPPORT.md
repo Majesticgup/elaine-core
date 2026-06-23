@@ -9,6 +9,8 @@ Elaine Core v0.1 is a controlled-alpha proof package. Support is limited to revi
 - Where are the receipts?
 - Which claims are blocked?
 - What failed during a fresh install?
+- How should a future controlled setup collect a sensitive value without
+  exposing it?
 
 ## Not Supported In This Package
 
@@ -19,6 +21,8 @@ Elaine Core v0.1 is a controlled-alpha proof package. Support is limited to revi
 - Live model/provider integration.
 - Private-corpus RAG.
 - Autonomous workstation control.
+- Password-manager replacement; users may use their own password manager, but
+  Elaine Core v0.1 does not store or manage passwords.
 
 ## Reporting Issues
 
@@ -31,6 +35,8 @@ For each issue, record:
 - Whether the issue affects understanding, installability, proof correctness, or claim wording.
 
 Security-sensitive issues should follow `SECURITY.md`.
+Credential-entry questions should start with
+`GUIDED_SETUP_AND_SECRET_ENTRY.md`.
 
 ## Severity And Escalation
 

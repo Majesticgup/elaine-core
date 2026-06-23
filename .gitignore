@@ -1,0 +1,17 @@
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.p12
+*.pfx
+*.kdbx
+id_rsa
+id_ed25519
+secrets/
+.elaine-secrets/
+receipts/*secret*
+receipts/*private*
+receipts/*token*
+logs/
+*.log

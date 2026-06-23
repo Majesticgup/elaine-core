@@ -1,8 +1,9 @@
 # Security Policy
 
-Status: DRAFT / NO PUBLIC REPORTING CHANNEL ACTIVE
+Status: PUBLIC PROOF PACKAGE SECURITY POLICY / NO BOUNTY / NOT SECURITY VALIDATION.
 
-This package is a public-review candidate and has not been published. It does not operate a managed security response program, hosted product, or vulnerability bounty.
+This package is a public proof package. It does not operate a managed security
+response program, hosted product, or vulnerability bounty.
 
 Elaine is designed around local cyber-governance and AI action boundaries. That means security reports should focus on whether the package leaks private material, overstates its protection, weakens the proof-before-action model, or creates unsafe automation expectations.
 
@@ -32,6 +33,10 @@ Elaine is designed around local cyber-governance and AI action boundaries. That 
 - Keep public claims lower than the evidence.
 - Record receipts for material security decisions.
 - Prefer local proof checks before hosted tools or provider calls.
+- For future credential setup lanes, use `GUIDED_SETUP_AND_SECRET_ENTRY.md` so
+  passwords, API keys, GitHub tokens, SSH private keys, and passphrases stay in
+  a local hidden prompt and out of chat, docs, screenshots, issues, receipts, and
+  reviewer returns.
 
 ## Source-Backed Release Pressure
 
@@ -43,3 +48,12 @@ The local release review uses public guidance as pressure, not as validation:
 - NIST SSDF AI companion guidance pressures AI-assisted development to keep model-generated material reviewable and bounded.
 
 These sources do not validate Elaine. They only define risks and release hygiene expectations that the package must not overclaim past.
+
+## GitHub Posture Audit
+
+`docs/GITHUB_SECURITY_AUDIT_PLAN.md` defines the read-only GitHub audit plan
+for repository visibility, branch protection or rulesets, collaborators, deploy
+keys, GitHub Apps, security logs, secret scanning, push protection, Dependabot,
+CodeQL/code scanning, GitHub Actions permissions, releases, tags, packages,
+webhooks, and project/issue surfaces. The plan does not authorize live account
+inspection or setting changes by itself.

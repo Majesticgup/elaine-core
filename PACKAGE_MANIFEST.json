@@ -27,8 +27,10 @@
   "docker_proof_runtime_claim_ceiling": "source package plus external A3 Docker execution receipts when paired by the readiness lane; no native OS proof, host inspection proof, production readiness, or security outcome claim",
   "required_files": [
     "PACKAGE_MANIFEST.json",
+    ".gitignore",
     "README.md",
     "DOWNLOAD_AND_REVIEW_GUIDE.md",
+    "GUIDED_SETUP_AND_SECRET_ENTRY.md",
     "FIRST_REVIEW_TEAM_PACKET.md",
     "QUICKSTART.md",
     "INSTALL.md",
@@ -64,7 +66,9 @@
     "docs/GOVERNANCE_MODEL.md",
     "docs/LIMITATIONS.md",
     "docs/PRODUCT_PROOF_BACKBONE.md",
+    "docs/GITHUB_SECURITY_AUDIT_PLAN.md",
     "docs/DEVCONTAINER_PLAN.md",
+    "tools/Start-ElaineGuidedSecretPrompt.ps1",
     "PROOF_LAB/README.md",
     "PROOF_LAB/docproof_cases.json",
     "PROOF_LAB/elaine_research_proof_lab.py",
@@ -87,6 +91,25 @@
     "runtime_app_data_included": false,
     "field_security_claimed": false,
     "production_ready_claimed": false
+  },
+  "guided_setup_and_secret_entry": {
+    "included": true,
+    "path": "GUIDED_SETUP_AND_SECRET_ENTRY.md",
+    "helper_path": "tools/Start-ElaineGuidedSecretPrompt.ps1",
+    "v0_1_secrets_required": false,
+    "password_manager_or_manual_question_included": true,
+    "raw_secret_persisted_by_helper": false,
+    "provider_call_used": false,
+    "git_action_used": false,
+    "account_setting_changed": false,
+    "claim_ceiling": "future controlled setup prompt pattern only; not authentication proof, password-manager replacement, security validation, or production readiness"
+  },
+  "github_security_audit_plan": {
+    "included": true,
+    "path": "docs/GITHUB_SECURITY_AUDIT_PLAN.md",
+    "live_audit_performed": false,
+    "account_or_repository_setting_changed": false,
+    "claim_ceiling": "read-only audit plan only; no live GitHub audit, remediation, security validation, compliance, or production-readiness claim"
   },
   "blocked_material_classes": [
     "private_business_plan",

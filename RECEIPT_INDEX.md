@@ -15,6 +15,15 @@ compliance, production, external-audit, or security-outcome evidence.
 | `receipts/runtime-core-proof-lab-receipt.json` | Runtime Core can invoke the proof-lab path and record a package-local receipt. | A persistent service, live API, live MCP tools, model calls, private RAG, or workstation control. |
 | `receipts/tuesday-fresh-copy-proof-lab-receipt.json` | A fresh-copy proof-lab run was recorded for this package shape. | Docker, Ubuntu, Windows, low-resource, or public-release readiness. |
 
+## Optional Local Prompt Receipt
+
+`tools/Start-ElaineGuidedSecretPrompt.ps1` can write
+`receipts/guided-secret-entry-receipt.json` during a future controlled setup
+lane. That receipt proves only that a local hidden prompt flow was rehearsed or
+used and that the receipt stayed redacted. It does not prove authentication,
+GitHub access, provider access, account security, production readiness, or a
+security outcome.
+
 ## External Track A Receipts
 
 These receipts are not required to run the clean package, but they should be

@@ -12,6 +12,7 @@ If you downloaded this from GitHub, start with:
 
 ```text
 DOWNLOAD_AND_REVIEW_GUIDE.md
+GUIDED_SETUP_AND_SECRET_ENTRY.md
 ```
 
 If you are one of the first three reviewers, also read:
@@ -41,6 +42,11 @@ You should understand that Elaine Core v0.1 currently demonstrates local
 proof-before-action and claim-boundary behavior on synthetic examples. It does
 not prove real-world protection, deployment readiness, compliance, or external
 validation.
+
+Elaine Core v0.1 does not require secrets. If a future controlled setup lane
+does require a credential, `GUIDED_SETUP_AND_SECRET_ENTRY.md` is the required
+user-led pattern: password manager or manual entry, local hidden prompt,
+redacted receipt, and no secret in chat or reviewer returns.
 
 ## 2. Run The Proof Lab
 

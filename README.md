@@ -14,6 +14,7 @@ Use these files in order:
 
 ```text
 DOWNLOAD_AND_REVIEW_GUIDE.md
+GUIDED_SETUP_AND_SECRET_ENTRY.md
 QUICKSTART.md
 REVIEWER_GUIDE.md
 REVIEWER_FEEDBACK_FORM.md
@@ -82,6 +83,25 @@ The proof lab writes a deterministic receipt to:
 receipts/elaine-proof-lab-receipt.json
 ```
 
+## Guided Setup And Secret Entry
+
+Elaine Core v0.1 does not require passwords, API keys, Git credentials,
+provider accounts, hosted retrieval, or private data. If a future controlled
+setup lane does require a sensitive value, use
+`GUIDED_SETUP_AND_SECRET_ENTRY.md`. That flow asks whether the user wants to use
+a password manager or manual entry, keeps the secret inside a local hidden
+terminal prompt, and writes only a redacted receipt.
+
+The included helper is:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File tools\Start-ElaineGuidedSecretPrompt.ps1
+```
+
+It is a local prompt helper only. It does not authenticate to GitHub, call a
+provider, install software, change account settings, persist the secret, or
+push to Git.
+
 ## Runtime Core CLI
 
 Runtime Core v0 adds a package-local CLI for inspecting the package from one command surface. It is not a service, API, MCP server, model runtime, installer, or autonomous workstation controller. It is not a persistent API/MCP service.
@@ -136,3 +156,10 @@ deployment, or patent-protection claims.
 ## Product Proof Appendix
 
 See `docs/PRODUCT_PROOF_BACKBONE.md` for the public-safe summary of the current local product-proof backbone. That appendix summarizes verifier-backed governance behavior only; it does not include private runtime data or make field-security, production, compliance, customer, or endorsement claims.
+
+## GitHub Security Audit Plan
+
+See `docs/GITHUB_SECURITY_AUDIT_PLAN.md` for the read-only GitHub account and
+repository audit plan. It is an audit-prep document only; live GitHub
+inspection, account changes, security-setting changes, credential changes, and
+remediation actions require their own owner gates.

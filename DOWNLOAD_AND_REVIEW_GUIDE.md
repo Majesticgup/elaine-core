@@ -24,6 +24,13 @@ The package is designed to run without:
 - deployment;
 - production data.
 
+If any normal v0.1 command asks for a password, API key, GitHub token, SSH key,
+or provider credential, stop and report a defect. For future controlled setup
+lanes that do require a sensitive value, use
+`GUIDED_SETUP_AND_SECRET_ENTRY.md`; it asks whether you use a password manager
+or prefer manual setup, keeps the secret in a local terminal prompt, and writes
+only a redacted receipt.
+
 ## What You Are Not Being Asked To Prove
 
 Do not treat this package as proof of:
@@ -45,6 +52,12 @@ Do not treat this package as proof of:
 5. Fill out `REVIEWER_FEEDBACK_FORM.md`.
 6. If you are part of controlled review, also copy and fill
    `REVIEWER_RETURN_TEMPLATE.json`.
+
+Optional orientation before any future credential lane:
+
+```text
+GUIDED_SETUP_AND_SECRET_ENTRY.md
+```
 
 ## Commands
 
